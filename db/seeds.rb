@@ -2,6 +2,7 @@
   email = Faker::Internet.email
   password = "password"
   User.create!(email: email,
+               name: name,
                password: password,
                password_confirmation: password,
                )
@@ -12,6 +13,7 @@ end
   Blog.create!(
     title: "あああ",
     content: "あああ",
+    user.name: "おおお",
     user_id: n
     )
     n = n + 1

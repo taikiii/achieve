@@ -13,7 +13,7 @@ end
   Blog.create!(
     title: "あああ",
     content: "あああ",
-    user.name: "おおお",
+    name: "おおお",
     user_id: n
     )
     n = n + 1

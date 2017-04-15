@@ -1,5 +1,6 @@
 100.times do |n|
   email = Faker::Internet.email
+  name = Faker::Name.name
   password = "password"
   User.create!(email: email,
                name: name,
@@ -13,7 +14,6 @@ end
   Blog.create!(
     title: "あああ",
     content: "あああ",
-    name: "おおお",
     user_id: n
     )
     n = n + 1

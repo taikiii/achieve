@@ -53,6 +53,8 @@ gem 'devise'
 
 gem 'faker'
 
+gem 'dotenv-rails'
+
 group :development do
   gem 'letter_opener_web'
 end

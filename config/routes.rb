@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users
-  
-  resources :blogs, only: [:index, :new, :create, :edit, :update, :destroy] do
+
+  resources :blogs, only: [:index, :new, :create, :edit, :update, :destroy, :subject] do
     collection do
       post :confirm
     end
   end
-  resources :contacts, only: [:new, :create] do
+  resources :contacts, only: [:new, :create, :subject] do
     collection do
       post :confirm
     end

@@ -38,10 +38,10 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
-  
-  config.action_mailer.default_url_options = { host: 'https://dive-into-code-taikiii.c9users.io' }
+
+  config.action_mailer.default_url_options = { host: 'localhost:3000' }
   config.action_mailer.delivery_method = :letter_opener_web
-  
+
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings =
   {

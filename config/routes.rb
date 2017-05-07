@@ -17,6 +17,8 @@ Rails.application.routes.draw do
     mount LetterOpenerWeb::Engine, at: "/letter_opener"
   end
 
+  resources :poems, only: [:index]
+  
   root 'top#index'
 
   get 'blogs' => 'blogs#index'

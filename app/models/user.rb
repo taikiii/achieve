@@ -8,11 +8,6 @@ class User < ActiveRecord::Base
 
   has_many :blogs
 
-  devise_for :users, controllers: {
-      registrations: "users/registrations",
-      omniauth_callbacks: "users/omniauth_callbacks"
-  }
-
   def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
     user = User.find_by(email: auth.info.email)
 

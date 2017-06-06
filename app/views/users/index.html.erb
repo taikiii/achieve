@@ -3,7 +3,7 @@
   <% @users.each do |user| %>
       <div class="container-child col-md-2 col-sm-4 col-xs-6 ">
         <%= profile_img(user) %>
-        <%= link_to users_path(user) do %>
+        <%= link_to user_path(user) do %>
           <%= user.name %>
         <% end %>
         <%= user.email %>

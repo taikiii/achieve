@@ -23,13 +23,13 @@
     });
   </script>
   <% end %>
+  <%= link_to  notifications_index_path, class: "navbar-brand" do %>
+    <i class="fa fa-bell fa-1x"><span id="unread_count"><%= @notifications_count %></span></i>
+  <% end %>
 </head>
 <body>
 
   <header>
-    <%= link_to  notifications_index_path, class: "navbar-brand" do %>
-      <i class="fa fa-bell fa-1x"><span id="unread_count"><%= @notifications_count %></span></i>
-    <% end %>
     <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->

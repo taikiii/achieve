@@ -8,6 +8,9 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <% if user_signed_in? %>
+  <%= link_to  notifications_index_path, class: "navbar-brand" do %>
+    <i class="fa fa-bell fa-1x"><span id="unread_count"><%= @notifications_count %></span></i>
+  <% end %>
   <script>
     var pusher = new Pusher('<%= ENV["PUSHER_KEY"] %>',{
       cluster: 'ap1',
@@ -22,9 +25,6 @@
       $('#unread_count').html(data.unread_counts);
     });
   </script>
-  <% end %>
-  <%= link_to  notifications_index_path, class: "navbar-brand" do %>
-    <i class="fa fa-bell fa-1x"><span id="unread_count"><%= @notifications_count %></span></i>
   <% end %>
 </head>
 <body>

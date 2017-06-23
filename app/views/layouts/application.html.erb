@@ -2,16 +2,16 @@
 <html>
 <head>
   <script src="https://js.pusher.com/4.0/pusher.min.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Achieve</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <% if user_signed_in? %>
+  <script>
   <%= link_to  notifications_index_path, class: "navbar-brand" do %>
     <i class="fa fa-bell fa-1x"><span id="unread_count"><%= @notifications_count %></span></i>
   <% end %>
-  <script>
     var pusher = new Pusher('<%= ENV["PUSHER_KEY"] %>',{
       cluster: 'ap1',
       encrypted: true
@@ -45,6 +45,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
+
         <li><%= link_to "お問い合わせ", new_contact_path %></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
